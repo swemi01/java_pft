@@ -3,6 +3,7 @@ package pl.stqa.pft.sandbox;
 public class Square {
     public double l;
 
+    //konstruktor
     public Square(double l)
     {
         this.l = l;
