@@ -19,12 +19,23 @@ public class MyFirstProgram {
         System.out.println("powierzchnia boku prostokąta " + r.a + " i " + r.b + area(r) );
 
 
-        //Point
-        Point p1 = new Point(4,1);
-        Point p2 = new Point(3,1);
+        Point a = new Point(4, 6);
+        Point b = new Point(7, 8);
+
+        System.out.println("length for " + a.x + " and " + b.y + " is " + distance(a, b) );
 
 
     }
+
+    public static double distance(Point p1, Point p2) {
+
+        double dx = p2.x - p1.x;
+        double dy = p2.y - p1.y;
+        return Math.sqrt((dx * dx) + (dy * dy));
+
+    }
+
+
 
     public static void hello(String sombody)
     {
