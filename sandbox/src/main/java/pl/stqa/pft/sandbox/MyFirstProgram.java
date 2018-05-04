@@ -22,7 +22,7 @@ public class MyFirstProgram {
         Point a = new Point(4, 6);
         Point b = new Point(7, 8);
 
-        System.out.println("length for " + a.x + " and " + b.y + " is " + a.distance() );
+        System.out.println("length for " + a.x + " and " + b.y + " is " + a.distance(b) );
 
     }
 
