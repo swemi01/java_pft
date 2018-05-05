@@ -9,7 +9,7 @@ import pl.stqa.pft.adressbook.model.GroupData;
 
 import java.util.concurrent.TimeUnit;
 
-public class ApplcationManager {
+public class ApplcationManager extends GroupHelper {
     FirefoxDriver wd;
 
     public static boolean isAlertPresent(FirefoxDriver wd) {
