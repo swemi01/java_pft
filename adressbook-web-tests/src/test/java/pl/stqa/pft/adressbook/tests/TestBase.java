@@ -1,4 +1,4 @@
-package pl.stqa.pft.adressbook;
+package pl.stqa.pft.adressbook.tests;
 
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
