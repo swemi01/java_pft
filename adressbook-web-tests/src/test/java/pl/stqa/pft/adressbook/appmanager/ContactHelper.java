@@ -5,7 +5,11 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import pl.stqa.pft.adressbook.model.ContactData;
 
 public class ContactHelper {
-    FirefoxDriver wd;
+    private FirefoxDriver wd;
+
+    public ContactHelper(FirefoxDriver wd) {
+        this.wd = wd;
+    }
 
     public void submitContactCreation() {
         wd.findElement(By.xpath("//div[@id='content']/form/input[21]")).click();
