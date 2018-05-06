@@ -8,7 +8,7 @@ import pl.stqa.pft.adressbook.model.ContactData;
 
 import java.util.concurrent.TimeUnit;
 
-public class ApplcationManager {
+public class ApplcationManager extends ContactHelper {
     FirefoxDriver wd;
 
     private SessionHelper sessionHelper;
