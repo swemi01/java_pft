@@ -1,6 +1,6 @@
 package pl.stqa.pft.adressbook.appmanager;
 
-import org.openqa.selenium.NoAlertPresentException;
+
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 
