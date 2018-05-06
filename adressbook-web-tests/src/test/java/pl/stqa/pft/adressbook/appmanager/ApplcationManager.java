@@ -8,9 +8,10 @@ import pl.stqa.pft.adressbook.model.ContactData;
 
 import java.util.concurrent.TimeUnit;
 
-public class ApplcationManager extends NavigationHelper{
-
+public class ApplcationManager {
     FirefoxDriver wd;
+
+    private NavigationHelper navigationHelper;
     private GroupHelper groupHelper;
 
     public static boolean isAlertPresent(FirefoxDriver wd) {
@@ -27,6 +28,7 @@ public class ApplcationManager extends NavigationHelper{
         wd.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
         wd.get("http://localhost/addressbook/");
         groupHelper = new GroupHelper(wd);
+        navigationHelper = new NavigationHelper(wd);
         login("admin", "secret");
     }
 
@@ -38,10 +40,6 @@ public class ApplcationManager extends NavigationHelper{
         wd.findElement(By.name("pass")).clear();
         wd.findElement(By.name("pass")).sendKeys(password);
         wd.findElement(By.xpath("//form[@id='LoginForm']/input[3]")).click();
-    }
-
-    public void goToGroupPage() {
-        wd.findElement(By.linkText("groups")).click();
     }
 
     public void stop() {
@@ -85,11 +83,11 @@ public class ApplcationManager extends NavigationHelper{
         wd.findElement(By.name("mobile")).sendKeys(contactData.getMobilePhone());
     }
 
-    public void goToContactPage() {
-        wd.findElement(By.linkText("add new")).click();
-    }
-
     public GroupHelper getGroupHelper() {
         return groupHelper;
+    }
+
+    public NavigationHelper getNavigationHelper() {
+        return navigationHelper;
     }
 }
