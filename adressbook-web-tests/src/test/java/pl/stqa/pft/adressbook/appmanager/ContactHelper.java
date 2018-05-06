@@ -28,4 +28,17 @@ public class ContactHelper extends HelperBase {
         type(By.name("mobile"),contactData.getMobilePhone());
 
     }
+
+    public void selectContact() {
+
+        click(By.name("selected[]"));
+    }
+
+    public void submitDeletionContact() {
+        click(By.xpath("//input[@value='Delete']"));
+    }
+
+    public void confirmDeletionContact() {
+        wd.switchTo().alert().accept();
+    }
 }
